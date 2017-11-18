@@ -180,10 +180,13 @@ public class Measurements {
    * Report a single value of a single metric. E.g. for read latency, operation="READ" and latency is the measured
    * value.
    */
+
+  private int count = 0;
   public void measure(String operation, int latency) {
     if (measurementInterval == 1) {
       return;
     }
+    System.out.println(operation+","+(++count)+","+latency+","+System.nanoTime());
     try {
       OneMeasurement m = getOpMeasurement(operation);
       m.measure(latency);

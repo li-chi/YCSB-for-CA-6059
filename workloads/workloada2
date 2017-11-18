@@ -30,8 +30,8 @@ fieldcount=10
 # The size of each field (in bytes)
 fieldlength=100
 
-recordcount=1000000
-operationcount=1100000
+recordcount=100
+operationcount=1000000
 workload=com.yahoo.ycsb.workloads.CoreWorkload
 
 readallfields=true
